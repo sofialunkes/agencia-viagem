@@ -10,8 +10,6 @@ public class Hotel
 {
     public Hotel()
     {
-        //
-        // TODO: Add constructor logic here
-        //
+
     }
 }
