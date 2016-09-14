@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+/// <summary>
+/// Summary description for ClienteBD
+/// </summary>
+public class ClienteBD
+{
+	public ClienteBD()
+	{
+
+	}
+}
