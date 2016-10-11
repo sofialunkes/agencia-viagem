@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Page_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Agência de Viagens</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../css/Agencia.css" rel="stylesheet" />
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav id="nav-lateral">
+            <ul>
+                <li>
+                    <br /><br />
+                    <h3>Agência de Viagens</h3>
+                </li>
+                <li><a href="cadastroCliente.aspx" class="links">
+                    <h4>Cadastro de Cliente</h4>
+                </a></li>
+                <li><a href="cadastroHotel.aspx" class="links">
+                    <h4>Cadastro de Hotel</h4>
+                </a></li>
+                <li><a href="cadastroPacotes.aspx" class="links">
+                    <h4>Cadastro de Pacote</h4>
+                </a></li>
+                <li><a href="cadastroVenda.aspx" class="links">
+                    <h4>Cadastro de Venda</h4>
+                </a></li>
+                <li><a href="#" class="links">
+                    <h4>SairEntrar</h4>
+                </a></li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid cabecalho">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4>Denise C. T. Sant'Anna</h4>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Sofia Lunkes da Silva</h4>
+                </div>
+            </div>
+        </div>
+                <div class="container-fluid conteudo">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

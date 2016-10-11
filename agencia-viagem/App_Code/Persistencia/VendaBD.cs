@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Summary description for HotelBD
+/// Summary description for VendaBD
 /// </summary>
-public class HotelBD
+public class VendaBD
 {
 
 

@@ -8,8 +8,10 @@ using System.Web;
 /// </summary>
 public class ClienteBD
 {
-	public ClienteBD()
-	{
 
-	}
+
+
+
+
+
 }

@@ -1,0 +1,15 @@
+azul forte{
+	#1E7BB2
+}
+azul claro{
+	#E5F5FF
+}
+azul medio{
+	#8FD5FF
+}
+marrom{
+	#B28240
+}
+bege{
+	#FFCF8F
+}
