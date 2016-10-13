@@ -8,6 +8,9 @@ using System.Web;
 /// </summary>
 public class Pacote
 {
+    public Pacote() {
+        Hotel = new Hotel();
+    }
     public int Codigo { get; set; }
     public string Descricao { get; set; }
     public DateTime DataInicio { get; set; }

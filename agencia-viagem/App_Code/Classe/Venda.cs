@@ -8,6 +8,10 @@ using System.Web;
 /// </summary>
 public class Venda
 {
+    public Venda() {
+        Pacote = new Pacote();
+        Cliente = new Cliente();
+    }
     public int Codigo { get; set; }
     public Pacote Pacote { get; set; }
     public Cliente Cliente { get; set; }
