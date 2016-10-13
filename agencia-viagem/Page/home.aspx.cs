@@ -14,15 +14,12 @@ public partial class Page_home : System.Web.UI.Page
 
     protected void btnEntrar_Click(object sender, EventArgs e)
     {
-        if ("deyse@suzane.com" == txtEmailLogin.Text)
-        {
-            Session["EMAIL"] = txtEmailLogin.Text;
-        }
-        if ("123" == txtSenhaLogin.Text)
-        {
-            Session["SENHA"] = txtSenhaLogin.Text;
-        }
+        Cliente cliente = new Cliente();
+        cliente.Email = txtEmailLogin.Text;
+        cliente.Senha = txtSenhaLogin.Text;
 
+        cliente = ClienteBD.Select(cliente);
+        Session["USUARIO"] = cliente;
         
         if (Session["EMAIL"] != null && Session["SENHA"] != null)
         {

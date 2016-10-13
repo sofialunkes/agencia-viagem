@@ -11,35 +11,35 @@ public class Mapped
 {
     //IDbconnection = obj. de conexão usado
     //Método para abrir uma conexão MySql e retorna para o IDbConnection.
-    public static IDbConnection Conexao()
+    public static IDbConnection Connection()
     {
-        IDbConnection con = new MySqlConnection(ConfigurationManager.AppSettings["strConexao"]);
-        con.Open();
-        return con;
+        IDbConnection conn = new MySqlConnection(ConfigurationManager.AppSettings["strConexao"]);
+        conn.Open();
+        return conn;
     }
 
     //Para montar uma linha de conexao, preciso de uma conexao, entao é passada a Idbconnection Conexao
-    public static IDbCommand Commando(string sql, IDbConnection Conexao)
+    public static IDbCommand Command(string sql, IDbConnection Connection)
     {
         //Cria linha de comando com a conexão aberta;
-        IDbCommand com = Conexao.CreateCommand();
-        com.CommandText = sql;
-        return com;
+        IDbCommand command = Connection.CreateCommand();
+        command.CommandText = sql;
+        return command;
     }
 
     //Pergunta que vai cair no P.I: Evitar injeção SQL. 
     //object: porque pode ser qq tipo de objeto (string, int etc).
-    public static IDbDataParameter Parametro(string nome, object valor)
+    public static IDbDataParameter Parameter(string nome, object valor)
     {
         return new MySqlParameter(nome, valor);
     }
 
 
     //IDbDataAdapter recebe uma coleção de dados genéricos;
-    public static IDataAdapter Adapter(IDbCommand comando)
+    public static IDataAdapter Adapter(IDbCommand command)
     {
         IDbDataAdapter adap = new MySqlDataAdapter();
-        adap.SelectCommand = comando;
+        adap.SelectCommand = command;
         return adap;
     }
 }
