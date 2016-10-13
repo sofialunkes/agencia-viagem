@@ -23,6 +23,7 @@ public partial class Page_home : System.Web.UI.Page
             Session["SENHA"] = txtSenhaLogin.Text;
         }
 
+        
         if (Session["EMAIL"] != null && Session["SENHA"] != null)
         {
             Response.Redirect("Index.aspx");

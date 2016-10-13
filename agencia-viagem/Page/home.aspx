@@ -18,7 +18,7 @@
             <br /><br /><br /><br /><br /><br />
             <div class="col-xs-6 col-xs-offset-4">
                 <div class="col-xs-2">
-                    <img src="../img/aviao3.png" width="65px" height="55px" />
+                    <img src="../img/aviao3.png"  style="width:65px; height:55px;" />
                 </div>
                 <div class="col-xs-8">
                     <h2>Agência de Viagens</h2>
