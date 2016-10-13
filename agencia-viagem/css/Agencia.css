@@ -45,13 +45,8 @@
     margin-top: 10px;
     width: 200px;
 }
-.links{
-    color: white;
-}
-.links:hover{
-    color: #FFCF8F;
-    text-decoration: none;
-}
-.links:active{
-    color: #B28240;
+.pVertical{
+    border-style: groove;
+    max-height: 300px;
+    height: 125px;
 }

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Page_cadastroVenda : System.Web.UI.Page
+public partial class Page_cliente : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,12 +14,8 @@ public partial class Page_cadastroVenda : System.Web.UI.Page
             Response.Redirect("home.aspx");
         }
     }
-    protected void btnCadastrarNovaVenda_Click(object sender, EventArgs e)
+    protected void btnCadastrarNovoCliente_Click(object sender, EventArgs e)
     {
-        Response.Redirect("cadastroVenda.aspx");
-    }
-    protected void btnCancelar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("venda.aspx");
+        Response.Redirect("cadastroCliente.aspx");
     }
 }

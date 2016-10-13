@@ -9,6 +9,13 @@ public partial class Page_cadastroHotel : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if ((string)Session["EMAIL"] != "deyse@suzane.com" && (string)Session["SENHA"] != "123")
+        {
+            Response.Redirect("home.aspx");
+        }
+    }
+    protected void btnCancelar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("hotel.aspx");
     }
 }

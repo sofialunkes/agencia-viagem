@@ -7,25 +7,47 @@
             <div class="col-xs-10"<%-- style="background: white"--%>>
                 <h2>Cadastro de Venda</h2>
                 <hr />
-<%--                <h4>Nome:</h4>
-                <asp:TextBox ID="txtNomeHotel" runat="server" placeholder="Nome do Hotel" CssClass="form-control"></asp:TextBox>
+                <h4>Cliente:</h4>
+                <asp:TextBox ID="txtNomeCliente" runat="server" placeholder="Nome do Cliente" CssClass="form-control"></asp:TextBox>
                 <br />
-                <h4>Classificação</h4>
-                ESTRELINHA
-                <br />    
+                <h4>Pacote:</h4>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <asp:DropDownList runat="server" ID="ddlPacote" CssClass="form-control"></asp:DropDownList>
+                    </div>
+                    <div class="col-xs-2">
+                        <asp:Button ID="btnNovoPacote" CssClass="btn btn-default" runat="server" Text="NOVO" />
+                    </div>
+                </div>
                 <br />
-                <h4>Estado:</h4>
-                <asp:DropDownList runat="server" ID="ddlEstado" CssClass="form-control"></asp:DropDownList>
-                <br />
-                <h4>Cidade:</h4>
-                <asp:DropDownList runat="server" ID="ddlCidade" CssClass="form-control"></asp:DropDownList>
-                <br /><br />--%>
 
+                    <table>
+                        <tr>
+                            <th>PACOTE</th>
+                            <th> |   QNTD DIAS</th>
+                            <th> |   DATA INICIAL</th>
+                            <th> |   SUBTOTAL</th>
+                            <th> |   </th>
+                        </tr>
+
+                        <tr>
+                            <td>ABDEFGHGIJKLSMNSJAIOS</td>
+                            <td> |   3</td>
+                            <td> |   15/07/2017</td>
+                            <td> |   RS 582,00</td>
+                            <td> |   CANCELAR</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="3">TOTAL FINAL</th>
+                            <th>R$ 000,000</th>
+                        </tr>
+                    </table>
                 <div class="col-xs-2 col-xs-offset-8">
-                    <asp:Button ID="btnCancelar" CssClass="btn btn-danger" runat="server" Text="Cancelar" Width="95px" />
+                    <asp:Button ID="btnCancelar" CssClass="btn btn-danger" runat="server" Text="Cancelar" Width="95px" OnClick="btnCancelar_Click" />
                 </div>
                 <div class="col-xs-2">
-                    <asp:Button ID="btnCadastrar" CssClass="btn btn-success" runat="server" Text="Cadastrar" Width="95px"  />
+                    <asp:Button ID="btnConcluirVenda" CssClass="btn btn-success" runat="server" Text="Concluir" Width="95px" />
                 </div>
                 <br />
                 <br /><br />

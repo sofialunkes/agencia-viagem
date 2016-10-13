@@ -21,23 +21,13 @@
             <ul>
                 <li>
                     <br /><br />
-                    <h3>Agência de Viagens</h3>
+                    <h3 style="text-align:right">Agência de Viagens</h3>
                 </li>
-                <li><a href="cadastroCliente.aspx" class="links">
-                    <h4>Cadastro de Cliente</h4>
-                </a></li>
-                <li><a href="cadastroHotel.aspx" class="links">
-                    <h4>Cadastro de Hotel</h4>
-                </a></li>
-                <li><a href="cadastroPacotes.aspx" class="links">
-                    <h4>Cadastro de Pacote</h4>
-                </a></li>
-                <li><a href="cadastroVenda.aspx" class="links">
-                    <h4>Cadastro de Venda</h4>
-                </a></li>
-                <li><a href="#" class="links">
-                    <h4>SairEntrar</h4>
-                </a></li>
+                <li><asp:Button ID="btnCliente" runat="server" CssClass="btn btn-primary" Text="Cliente" OnClick="btnCliente_Click" Width="230px" Height="35px" /></li>
+                <li><asp:Button ID="btnHotel" runat="server" CssClass="btn btn-primary" Text="Hotel" OnClick="btnHotel_Click" Width="230px" Height="35px" /></li>
+                <li><asp:Button ID="btnPacote" runat="server" CssClass="btn btn-primary" Text="Pacote" OnClick="btnPacote_Click" Width="230px" Height="35px" /></li>
+                <li><asp:Button ID="btnVenda" runat="server" CssClass="btn btn-primary" Text="Venda" OnClick="btnVenda_Click" Width="230px" Height="35px" /></li>
+                <li><asp:Button ID="btnSair" runat="server" CssClass="btn btn-primary" Text="Fazer Logout" OnClick="btnSair_Click" Width="230px" Height="35px" /></li>
             </ul>
         </nav>
 
