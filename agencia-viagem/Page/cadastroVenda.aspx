@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Agência de Viagens" Language="C#" MasterPageFile="~/Page/Master.master" AutoEventWireup="true" CodeFile="cadastroVenda.aspx.cs" Inherits="Page_cadastroVenda" %>
+﻿<%@ Page Title="Agência de Viagens" Language="C#" MasterPageFile="~/Page/Dashboard.master" AutoEventWireup="true" CodeFile="cadastroVenda.aspx.cs" Inherits="Page_cadastroVenda" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Page_Master" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Dashboard.master.cs" Inherits="Page_Master" %>
 
 <!DOCTYPE html>
 
@@ -8,8 +8,9 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="../css/Agencia.css" rel="stylesheet" />
-    <script src="../js/jquery-1.12.0.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-select.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

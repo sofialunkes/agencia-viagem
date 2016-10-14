@@ -41,8 +41,10 @@
                     <div class="col-xs-4 col-xs-offset-4">
                         <h4>Senha</h4>
                         <asp:TextBox ID="txtSenhaLogin" runat="server" TextMode="Password" placeholder="********" CssClass="form-control"></asp:TextBox>
+                        
                     </div>
                 </div>
+                <asp:Label runat="server" ID="lblFalhaLogin"></asp:Label>
                 <div class="row">
                     <div class="col-xs-4 col-xs-offset-4">
                         <br />

@@ -18,9 +18,16 @@ public partial class Page_home : System.Web.UI.Page
         cliente.Email = txtEmailLogin.Text;
         cliente.Senha = txtSenhaLogin.Text;
 
-        cliente = ClienteBD.Select(cliente);
-        Session["USUARIO"] = cliente;
+        int login = ClienteBD.Select(cliente);
         
+        if(login < 0) {
+            lblFalhaLogin.Text = "<div class ='row'>"
+                +"<div class='alert aler-danger'>Email ou Senha Incorretos! Tente novamente. </div>"
+                +"</div>";
+        }
+        
+
+
         if (Session["EMAIL"] != null && Session["SENHA"] != null)
         {
             Response.Redirect("Index.aspx");
