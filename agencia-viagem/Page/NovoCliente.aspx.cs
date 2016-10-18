@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class Page_Default : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
+        Session["USUARIO"] = null;
     }
 
     protected void btnCriarConta_Click(object sender, EventArgs e) {
@@ -22,7 +23,7 @@ public partial class Page_Default : System.Web.UI.Page {
 
         if (retorno > 0) {
             Session["USUARIO"] = cliente;
-            Response.Redirect("Index.aspx");
+            Response.Redirect("Dashboard.aspx");
         } else {
             lblIncorreto.Text = "<div class='alert alert-danger'> Cadastro incorreto. Verifique os campos </div>";
         }

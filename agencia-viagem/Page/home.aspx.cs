@@ -23,6 +23,7 @@ public partial class Page_home : System.Web.UI.Page {
                 + "</div>";
         }else {
             Session["USUARIO"] = cliente;
+            Response.Redirect("Dashboard.aspx");
         }
     }
 }

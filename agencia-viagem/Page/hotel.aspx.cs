@@ -9,8 +9,7 @@ public partial class Page_hotel : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if ((string)Session["EMAIL"] != "deyse@suzane.com" && (string)Session["SENHA"] != "123")
-        {
+        if (Session["USUARIO"] == null) {
             Response.Redirect("home.aspx");
         }
     }
