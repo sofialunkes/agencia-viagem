@@ -5,17 +5,32 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Page_cadastroCliente : System.Web.UI.Page
-{
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        if (Session["CLIENTE"] == null)
-        {
-            Response.Redirect("home.aspx");
+public partial class Page_Default : System.Web.UI.Page {
+    protected void Pre_Init(object sender, EventArgs e) {
+        if (Session["USUARIO"] != null) {
+            this.MasterPageFile = "Dashboard.master";
         }
     }
-    protected void btnCancelar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("cliente.aspx");
+    protected void Page_Load(object sender, EventArgs e) {
+        
+    }
+
+    protected void btnCriarConta_Click(object sender, EventArgs e) {
+        Cliente cliente = new Cliente();
+        cliente.Nome = txtNome.Text;
+        cliente.Email = txtEmail.Text;
+        cliente.Senha = txtSenha.Text;
+        cliente.Cpf = txtCpf.Text;
+        cliente.Telefone = txtTelefone.Text;
+
+        int retorno = 0;
+        retorno = ClienteBD.Insert(cliente);
+
+        if (retorno > 0) {
+            Session["USUARIO"] = cliente;
+            Response.Redirect("Dashboard.aspx");
+        } else {
+            lblIncorreto.Text = "<div class='alert alert-danger'> Cadastro incorreto. Verifique os campos </div>";
+        }
     }
 }
