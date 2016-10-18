@@ -24,12 +24,5 @@ public partial class Page_home : System.Web.UI.Page {
         }else {
             Session["USUARIO"] = cliente;
         }
-
-
-        if (Session["USUARIO"] != null) {
-            Response.Redirect("Index.aspx");
-        }
-        Response.Redirect("home.aspx");
-
     }
 }
