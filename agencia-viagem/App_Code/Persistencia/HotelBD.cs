@@ -77,5 +77,23 @@ public class HotelBD {
         return status;        
     }
 
+    public static int Delete(int codigo) {
+        int status = 0;
 
+        try {
+            IDbConnection objConexao;
+            IDbCommand objCommand;
+            string sql = "DELETE FROM hot_hotel WHERE hot_codigo=?codigo";
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", codigo));
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+        } catch (Exception ex) {
+            status = -2;
+        }
+        return status;
+    }
 }

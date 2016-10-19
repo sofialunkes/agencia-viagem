@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div class="col-lg-10 table-responsive">
-                <asp:GridView runat="server" ID="gvHotels" AutoGenerateColumns="false" OnRowDataBound="gvHotels_RowDataBound" CssClass="table table-hover">
+                <asp:GridView runat="server" ID="gvHotels" AutoGenerateColumns="false" OnRowDataBound="gvHotels_RowDataBound" OnRowCommand="gvHotels_RowCommand" CssClass="table table-hover">
                     <Columns>
                         <asp:BoundField DataField="hot_codigo" HeaderText="Codigo" />
                         <asp:BoundField DataField="hot_classificacao" HeaderText="Classificacao" />
@@ -25,7 +25,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir" OnClick="lbExcluir_Click" CommandArgument='<%# Bind("hot_codigo") %>'>Excluir</asp:LinkButton>
+                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir" CommandArgument='<%# Bind("hot_codigo") %>'>Excluir</asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

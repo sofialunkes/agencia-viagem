@@ -30,7 +30,7 @@ public partial class Page_hotel : System.Web.UI.Page {
             gvHotels.DataBind();
             gvHotels.Visible = true;
             gvHotels.HeaderRow.TableSection = TableRowSection.TableHeader;
-        }else {
+        } else {
             gvHotels.Visible = false;
         }
     }
@@ -43,7 +43,17 @@ public partial class Page_hotel : System.Web.UI.Page {
 
     }
 
-    protected void lbExcluir_Click(object sender, EventArgs e) {
-        Hotel hotel = new Hotel();
+
+    protected void gvHotels_RowCommand(object sender, GridViewCommandEventArgs e) {
+        if (e.CommandName == "Excluir") {
+            int status = HotelBD.Delete(Convert.ToInt32(e.CommandArgument));
+
+            if(status == 0) {
+                CarregarGrid();
+                Response.Write("<script>alert('Excluido'); </script>");
+            }else {
+                Response.Write("<script>alert('Erro'); </script>");
+            }
+        }
     }
 }
