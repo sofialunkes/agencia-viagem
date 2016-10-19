@@ -17,4 +17,8 @@ public partial class Page_hotel : System.Web.UI.Page
     {
         Response.Redirect("cadastroHotel.aspx");
     }
+
+    protected void gvHotels_RowDataBound(object sender, GridViewRowEventArgs e) {
+
+    }
 }

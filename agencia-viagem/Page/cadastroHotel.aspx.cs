@@ -14,4 +14,20 @@ public partial class Page_cadastroHotel : System.Web.UI.Page {
     protected void btnCancelar_Click(object sender, EventArgs e) {
         Response.Redirect("hotel.aspx");
     }
+
+    protected void btnCadastrar_Click(object sender, EventArgs e) {
+        Hotel hotel = new Hotel();
+
+        hotel.Nome = txtNomeHotel.Text;
+        hotel.Classificacao = ddlClassificacao.SelectedIndex;
+        hotel.Cidade = txtCidade.Text;
+        
+        int status = HotelBD.Insert(hotel);
+
+        if (status < 0) {
+            lblInfo.Text = "<div class='alert alert-danger col-lg-12'>Erro ao Cadastrar. Verifique as informações </div>";
+        }else {
+            lblInfo.Text = "<div class='label-success label col-lg-12'>Cadastro Efetuado com Sucesso!</div>";
+        }
+    }
 }

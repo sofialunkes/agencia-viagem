@@ -18,7 +18,7 @@
         <br />
         <div class="row">
             <h4 class="col-lg-12">Classificação</h4>
-            <asp:DropDownList runat="server" CssClass="btn btn-info dropdown col-lg-2 btn-align">
+            <asp:DropDownList runat="server" CssClass="btn btn-info dropdown col-lg-2 btn-align" ID="ddlClassificacao">
                 <asp:ListItem>5</asp:ListItem>
                 <asp:ListItem>4</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
@@ -28,24 +28,26 @@
         </div>
         <br />
         <div class="row">
-            <h4 class="col-lg-12">Estado:</h4>
-            <asp:DropDownList runat="server" ID="ddlEstado" CssClass="form-control col-lg-10"></asp:DropDownList>
+            <h4 class="col-lg-12">Cidade:</h4>
+            <asp:TextBox runat="server" ID="txtCidade" CssClass="form-control col-lg-10"></asp:TextBox>
+        </div>
+        <br />
+
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-6">
+                <asp:Button ID="btnCancelar" CssClass="btn btn-danger col-lg-5" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
+                <div class="col-lg-1"></div>
+                <asp:Button ID="btnCadastrar" CssClass="btn btn-success col-lg-5" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click" />
+            </div>
         </div>
 
         <br />
-        <h4>Cidade:</h4>
-        <asp:DropDownList runat="server" ID="ddlCidade" CssClass="form-control"></asp:DropDownList>
         <br />
-        <br />
-
-        <div class="col-xs-2 col-xs-offset-8">
-            <asp:Button ID="btnCancelar" CssClass="btn btn-danger" runat="server" Text="Cancelar" Width="95px" OnClick="btnCancelar_Click" />
+        <div class="row">
+            <div class="col-lg-12">
+                <asp:Label runat="server" ID="lblInfo"></asp:Label>
+            </div>
         </div>
-        <div class="col-xs-2">
-            <asp:Button ID="btnCadastrar" CssClass="btn btn-success" runat="server" Text="Cadastrar" Width="95px" />
-        </div>
-        <br />
-        <br />
         <br />
     </div>
 </asp:Content>

@@ -13,10 +13,12 @@ public class ClienteBD {
 
     public static int Select(Cliente cliente) {
         int status = 0;
+
         IDbConnection objConexao;
         IDbCommand objCommand;
         IDataReader objDataReader;
         objConexao = Mapped.Connection();
+
         objCommand = Mapped.Command("SELECT * FROM CLI_CLIENTE WHERE CLI_EMAIL = ?email AND CLI_SENHA = ?senha", objConexao);
         objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
         objCommand.Parameters.Add(Mapped.Parameter("?senha", cliente.Senha));

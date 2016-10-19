@@ -8,9 +8,10 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="../css/Agencia.css" rel="stylesheet" />
-    <script src="../Scripts/jquery-3.1.1.min.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/bootstrap-select.min.js"></script>
+    <link href="../Content/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/DataTables/css/buttons.bootstrap.min.css" rel="stylesheet" />
+
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -21,19 +22,24 @@
         <nav id="nav-lateral">
             <ul>
                 <li>
-                    <br /><br />
-                    <h3 style="text-align:right">Agência de Viagens</h3>
+                    <br />
+                    <br />
+                    <h3 style="text-align: right">Agência de Viagens</h3>
                 </li>
-                <li><asp:Button ID="btnCliente" runat="server" CssClass="btn btn-primary" Text="Cliente" OnClick="btnCliente_Click" Width="230px" Height="35px" /></li>
-                <li><asp:Button ID="btnHotel" runat="server" CssClass="btn btn-primary" Text="Hotel" OnClick="btnHotel_Click" Width="230px" Height="35px" /></li>
-                <li><asp:Button ID="btnPacote" runat="server" CssClass="btn btn-primary" Text="Pacote" OnClick="btnPacote_Click" Width="230px" Height="35px" /></li>
-                <li><asp:Button ID="btnVenda" runat="server" CssClass="btn btn-primary" Text="Venda" OnClick="btnVenda_Click" Width="230px" Height="35px" /></li>
-                <li><asp:Button ID="btnSair" runat="server" CssClass="btn btn-primary" Text="Fazer Logout" OnClick="btnSair_Click" Width="230px" Height="35px" /></li>
+                <li>
+                    <asp:Button ID="btnCliente" runat="server" CssClass="btn btn-primary" Text="Cliente" OnClick="btnCliente_Click" Width="230px" Height="35px" /></li>
+                <li>
+                    <asp:Button ID="btnHotel" runat="server" CssClass="btn btn-primary" Text="Hotel" OnClick="btnHotel_Click" Width="230px" Height="35px" /></li>
+                <li>
+                    <asp:Button ID="btnPacote" runat="server" CssClass="btn btn-primary" Text="Pacote" OnClick="btnPacote_Click" Width="230px" Height="35px" /></li>
+                <li>
+                    <asp:Button ID="btnVenda" runat="server" CssClass="btn btn-primary" Text="Venda" OnClick="btnVenda_Click" Width="230px" Height="35px" /></li>
+                <li>
+                    <asp:Button ID="btnSair" runat="server" CssClass="btn btn-primary" Text="Fazer Logout" OnClick="btnSair_Click" Width="230px" Height="35px" /></li>
             </ul>
         </nav>
-
-        <div class="container-fluid cabecalho">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row cabecalho">
                 <div class="col-xs-6">
                     <h4>Denise C. T. Sant'Anna</h4>
                 </div>
@@ -41,14 +47,19 @@
                     <h4>Sofia Lunkes da Silva</h4>
                 </div>
             </div>
-        </div>
-                <div class="container-fluid conteudo">
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-2">
+            <div class="row conteudo">
+                <div class="col-xs-10 col-xs-offset-2 ">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
     </form>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/DataTables/dataTables.buttons.min.js"></script>
+    <script src="../Scripts/DataTables/buttons.flash.min.js"></script>
+    <script src="../Scripts/DataTables/buttons.print.min.js"></script>
+    <script src="../Scripts/DataTables/buttons.colVis.min.js"></script>
 </body>
 </html>
