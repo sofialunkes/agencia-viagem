@@ -60,21 +60,21 @@ public class HotelBD {
 
 
             connection = Mapped.Connection();
-            queryCommand = Mapped.Command("INSERT INTO HOT_HOTEL(HOT_NOME,HOT_CLASSIFICACAO, HOT_CIDADE) VALUES(?nome, ?classificacao, ?cidade)", connection);
+            queryCommand = Mapped.Command("INSERT INTO HOT_HOTEL(HOT_NOME,HOT_CLASSIFICACAO, HOT_CIDADE) VALUES(?nome, ?classificacao, ?cidade);", connection);
             queryCommand.Parameters.Add(Mapped.Parameter("?nome", hotel.Nome));
             queryCommand.Parameters.Add(Mapped.Parameter("?classificacao", hotel.Classificacao));
             queryCommand.Parameters.Add(Mapped.Parameter("?cidade", hotel.Cidade));
+
+            queryCommand.ExecuteNonQuery();
 
             connection.Close();
             connection.Dispose();
             queryCommand.Dispose();
 
-            return status;
         }catch(Exception) {
             status = -2;
-            return status;
         }
-        
+        return status;        
     }
 
 

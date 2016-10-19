@@ -25,12 +25,11 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir" CommandArgument='<%# Bind("hot_codigo") %>'>Excluir</asp:LinkButton>
+                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir" OnClick="lbExcluir_Click" CommandArgument='<%# Bind("hot_codigo") %>'>Excluir</asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-
             </div>
         </div>
     </div>

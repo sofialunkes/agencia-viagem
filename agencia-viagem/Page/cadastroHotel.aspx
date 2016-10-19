@@ -19,11 +19,12 @@
         <div class="row">
             <h4 class="col-lg-12">Classificação</h4>
             <asp:DropDownList runat="server" CssClass="btn btn-info dropdown col-lg-2 btn-align" ID="ddlClassificacao">
-                <asp:ListItem>5</asp:ListItem>
-                <asp:ListItem>4</asp:ListItem>
-                <asp:ListItem>3</asp:ListItem>
-                <asp:ListItem>2</asp:ListItem>
-                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem ></asp:ListItem>
+                <asp:ListItem >5</asp:ListItem>
+                <asp:ListItem >4</asp:ListItem>
+                <asp:ListItem >3</asp:ListItem>
+                <asp:ListItem >2</asp:ListItem>
+                <asp:ListItem >1</asp:ListItem>
             </asp:DropDownList>
         </div>
         <br />

@@ -9,6 +9,10 @@ public partial class Page_cadastroHotel : System.Web.UI.Page {
     protected void Page_Load(object sender, EventArgs e) {
         if (Session["USUARIO"] == null) {
             Response.Redirect("home.aspx");
+        }else {
+            txtNomeHotel.Text="";
+            ddlClassificacao.SelectedValue = "";
+            txtCidade.Text = "";
         }
     }
     protected void btnCancelar_Click(object sender, EventArgs e) {
@@ -19,15 +23,15 @@ public partial class Page_cadastroHotel : System.Web.UI.Page {
         Hotel hotel = new Hotel();
 
         hotel.Nome = txtNomeHotel.Text;
-        hotel.Classificacao = ddlClassificacao.SelectedIndex;
+        hotel.Classificacao = Convert.ToInt32(ddlClassificacao.SelectedValue);
         hotel.Cidade = txtCidade.Text;
-        
+
         int status = HotelBD.Insert(hotel);
 
-        if (status < 0) {
+        if (status == 0) {
+            lblInfo.Text = "<div class='alert alert-success col-lg-12'>Cadastro Efetuado com Sucesso!</div>";
+        } else {
             lblInfo.Text = "<div class='alert alert-danger col-lg-12'>Erro ao Cadastrar. Verifique as informações </div>";
-        }else {
-            lblInfo.Text = "<div class='label-success label col-lg-12'>Cadastro Efetuado com Sucesso!</div>";
         }
     }
 }
