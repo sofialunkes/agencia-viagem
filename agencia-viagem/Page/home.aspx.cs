@@ -19,7 +19,8 @@ public partial class Page_home : System.Web.UI.Page {
 
         if (login < 0) {
             lblFalhaLogin.Text = "<div class ='row'>"
-                + "<div class='alert aler-danger'>Email ou Senha Incorretos! Tente novamente. </div>"
+                + "<div class='alert aler-danger'>"
+                +"Email ou Senha Incorretos! Tente novamente. </div>"
                 + "</div>";
         }else {
             Session["USUARIO"] = cliente;
