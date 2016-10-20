@@ -96,4 +96,29 @@ public class HotelBD {
         }
         return status;
     }
+
+    public static int Update(Hotel hotel) {
+        int status = 0;
+        try {
+            IDbConnection connection;
+            IDbCommand queryCommand;
+
+
+            connection = Mapped.Connection();
+            queryCommand = Mapped.Command("UPDATE HOT_HOTEL SET HOT_NOME= ?nome,HOT_CLASSIFICACAO= ?classificacao, HOT_CIDADE=?cidade WHERE HOT_CODIGO  =?codigo;", connection);
+            queryCommand.Parameters.Add(Mapped.Parameter("?nome", hotel.Nome));
+            queryCommand.Parameters.Add(Mapped.Parameter("?classificacao", hotel.Classificacao));
+            queryCommand.Parameters.Add(Mapped.Parameter("?cidade", hotel.Cidade));
+            queryCommand.Parameters.Add(Mapped.Parameter("?codigo", hotel.Codigo));
+            queryCommand.ExecuteNonQuery();
+
+            connection.Close();
+            connection.Dispose();
+            queryCommand.Dispose();
+
+        } catch (Exception) {
+            status = -2;
+        }
+        return status;
+    }
 }

@@ -12,16 +12,20 @@
         </div>
         <div class="row">
             <div class="col-lg-10 table-responsive">
-                <asp:GridView runat="server" ID="gvHotels" AutoGenerateColumns="false" OnRowDataBound="gvHotels_RowDataBound" OnRowCommand="gvHotels_RowCommand" CssClass="table table-hover">
+                <asp:GridView runat="server" ID="gvHotels" AutoGenerateColumns="false" OnRowEditing="gvHotels_RowEditing" CssClass="table table-hover">
                     <Columns>
-                        <asp:BoundField DataField="hot_codigo" HeaderText="Codigo" />
+                        <asp:BoundField DataField="hot_codigo" HeaderText="Codigo" ApplyFormatInEditMode="false" />
                         <asp:BoundField DataField="hot_classificacao" HeaderText="Classificacao" />
                         <asp:BoundField DataField="hot_nome" HeaderText="Nome" />
                         <asp:BoundField DataField="hot_cidade" HeaderText="Cidade" />
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("hot_codigo") %>'>Alterar</asp:LinkButton>
+                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Edit" CommandArgument='<%# Bind("hot_codigo") %>'>Alterar</asp:LinkButton>
                             </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:LinkButton Text="Update" runat="server" OnClick="OnUpdate" />
+                                <asp:LinkButton Text="Cancel" runat="server" OnClick="OnCancel" />
+                            </EditItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
