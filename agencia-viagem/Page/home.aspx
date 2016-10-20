@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-xs-4 col-xs-offset-4">
                             <br />
-                            <a href="NovoCliente.aspx" style="color: white; font-size: 18px;" class="col-lg-6 col-lg-offset-3">Não possui conta? Cadastre-se!</a>
+                            <a href="cadastroCliente.aspx" style="color: white; font-size: 18px;" class="col-lg-6 col-lg-offset-3">Não possui conta? Cadastre-se!</a>
                         </div>
                     </div>
                 </div>

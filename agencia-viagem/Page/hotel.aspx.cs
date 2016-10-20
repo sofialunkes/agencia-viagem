@@ -80,10 +80,14 @@ public partial class Page_hotel : System.Web.UI.Page {
     }
 
     protected void OnCancel(object sender, EventArgs e) {
-
+        gvHotels.EditIndex = -1;
+        CarregarGrid();
     }
 
     protected void btnCadastrarNovoHotel_Click(object sender, EventArgs e) {
-        Response.Redirect("cadastroHotel.aspx");
+        Response.Redirect("cadast'roHotel.aspx");
+    }
+    protected void gvHotels_RowDeleted(object sender, GridViewDeletedEventArgs e) {
+        
     }
 }
