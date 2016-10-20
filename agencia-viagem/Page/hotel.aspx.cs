@@ -87,6 +87,7 @@ public partial class Page_hotel : System.Web.UI.Page {
     protected void btnCadastrarNovoHotel_Click(object sender, EventArgs e) {
         Response.Redirect("cadast'roHotel.aspx");
     }
+
     protected void gvHotels_RowDeleted(object sender, GridViewDeletedEventArgs e) {
         
     }
