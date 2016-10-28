@@ -10,6 +10,21 @@ using System.Web;
 /// Summary description for ClienteBD
 /// </summary>
 public class ClienteBD {
+    public static DataSet SelectAll() {
+        IDbConnection objConnection;
+        IDbCommand queryCommand;
+        IDataAdapter objAdapter;
+        DataSet ds = new DataSet();
+        objConnection = Mapped.Connection();
+        queryCommand = Mapped.Command("SELECT * FROM CLI_CLIENTE ORDER BY CLI_NOME", objConnection);
+        objAdapter = Mapped.Adapter(queryCommand);
+        objAdapter.Fill(ds);
+
+        objConnection.Close();
+        queryCommand.Dispose();
+
+        return ds;
+    }
 
     public static int Select(Cliente cliente) {
         int status = 0;
@@ -38,7 +53,6 @@ public class ClienteBD {
         return status;
     }
 
-
     public static int Insert(Cliente cliente) {
         int retorno = 1;
         try {
@@ -63,5 +77,31 @@ public class ClienteBD {
             retorno = -2;
         }
         return retorno;
+    }
+
+    public static int Update(Cliente cliente) {
+        int status = 0;
+        try {
+            IDbConnection connection;
+            IDbCommand queryCommand;
+
+            connection = Mapped.Connection();
+            queryCommand = Mapped.Command("UPDATE CLI_CLIENTE SET CLI_NOME = ?nome, CLI_EMAIL = ?email, CLI_SENHA = ?senha, CLI_CPF= ?cpf, CLI_TELEFONE= ?telefone WHERE CLI_CODIGO = ?codigo", connection);
+            queryCommand.Parameters.Add(Mapped.Parameter("?codigo", cliente.Codigo));
+            queryCommand.Parameters.Add(Mapped.Parameter("nome", cliente.Nome));
+            queryCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
+            queryCommand.Parameters.Add(Mapped.Parameter("?senha", cliente.Senha));
+            queryCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.Cpf));
+            queryCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
+            queryCommand.ExecuteNonQuery();
+
+            connection.Close();
+            connection.Dispose();
+            queryCommand.Dispose();
+
+        } catch (Exception) {
+            status = -2;
+        }
+        return status;
     }
 }
