@@ -37,6 +37,7 @@
                 </div>
                 <br />
                 <br /><br />
+                <asp:Label runat="server" ID="lblInformacao"></asp:Label>
             </div>
 </asp:Content>
 

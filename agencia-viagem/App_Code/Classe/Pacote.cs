@@ -6,8 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Pacote
 /// </summary>
-public class Pacote
-{
+public class Pacote {
     public Pacote() {
         Hotel = new Hotel();
     }
@@ -17,7 +16,4 @@ public class Pacote
     public int QtdDias { get; set; }
     public Hotel Hotel { get; set; }
     public double Valor { get; set; }
-
-
-    
 }

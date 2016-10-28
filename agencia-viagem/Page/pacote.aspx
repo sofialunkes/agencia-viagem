@@ -12,16 +12,16 @@
         </div>
         <div class="row">
             <div class="col-lg-10 table-responsive">
-                <asp:GridView runat="server" ID="gvPacotes" AutoGenerateColumns="false" OnRowEditing="gvHotels_RowEditing" OnRowDeleted="gvHotels_RowDeleted" CssClass="table table-hover">
+                <asp:GridView runat="server" ID="gvPacotes" AutoGenerateColumns="false" OnRowEditing="gvPacotes_RowEditing" OnRowDeleted="gvPacotes_RowDeleted" CssClass="table table-hover">
                     <Columns>
-                        <asp:BoundField DataField="pac.pac_codigo" HeaderText="Codigo" ReadOnly="true" />
-                        <asp:BoundField DataField="pac.pac_descricao" HeaderText="Descricao" />
-                        <asp:BoundField DataField="hot.hot_nome" HeaderText="Hotel" />
-                        <asp:BoundField DataField="pac.pac_data_inicio" HeaderText="Data Inicio" />
-                        <asp:BoundField DataField="pac.pac_valor" HeaderText="Valor" />
+                        <asp:BoundField DataField="pac_codigo" HeaderText="Codigo" ReadOnly="true" />
+                        <asp:BoundField DataField="pac_descricao" HeaderText="Descricao" />
+                        <asp:BoundField DataField="hot_nome" HeaderText="Hotel" />
+                        <asp:BoundField DataField="pac_data_inicio" HeaderText="Data Inicio" />
+                        <asp:BoundField DataField="pac_valor" HeaderText="Valor" />
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Edit" CommandArgument='<%# Bind("pac.pac_codigo") %>'>Alterar</asp:LinkButton>
+                                <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Edit" CommandArgument='<%# Bind("pac_codigo") %>'>Alterar</asp:LinkButton>
                             </ItemTemplate>
                             <EditItemTemplate>
                                 <asp:LinkButton Text="Update" runat="server" OnClick="OnUpdate" />
@@ -30,7 +30,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="">
                             <ItemTemplate>
-                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Delete" CommandArgument='<%# Bind("pac.pac_codigo") %>'>Excluir</asp:LinkButton>
+                                <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Delete" CommandArgument='<%# Bind("pac_codigo") %>'>Excluir</asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
