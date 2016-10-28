@@ -14,4 +14,11 @@ public partial class Page_pacote : System.Web.UI.Page {
     protected void btnCadastrarNovoPacote_Click(object sender, EventArgs e) {
         Response.Redirect("cadastroPacote.aspx");
     }
+
+    protected void OnUpdate() {
+
+    }
+    protected void OnCancel() {
+
+    }
 }

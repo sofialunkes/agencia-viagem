@@ -14,7 +14,7 @@
             <div class="col-lg-10 table-responsive">
                 <asp:GridView runat="server" ID="gvHotels" AutoGenerateColumns="false" OnRowEditing="gvHotels_RowEditing" OnRowDeleted="gvHotels_RowDeleted" CssClass="table table-hover">
                     <Columns>
-                        <asp:BoundField DataField="hot_codigo" HeaderText="Codigo" ReadOnly="true" />
+                        <asp:BoundField DataField="hot_codigo" HeaderText="Codigo" ReadOnly="true"/>
                         <asp:BoundField DataField="hot_classificacao" HeaderText="Classificacao" />
                         <asp:BoundField DataField="hot_nome" HeaderText="Nome" />
                         <asp:BoundField DataField="hot_cidade" HeaderText="Cidade" />

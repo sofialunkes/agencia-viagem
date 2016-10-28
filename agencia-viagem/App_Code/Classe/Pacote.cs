@@ -17,4 +17,7 @@ public class Pacote
     public int QtdDias { get; set; }
     public Hotel Hotel { get; set; }
     public double Valor { get; set; }
+
+
+    
 }

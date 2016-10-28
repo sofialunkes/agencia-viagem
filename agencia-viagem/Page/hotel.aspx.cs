@@ -60,18 +60,14 @@ public partial class Page_hotel : System.Web.UI.Page {
 
     protected void OnUpdate(object sender, EventArgs e) {
         GridViewRow row = (sender as LinkButton).NamingContainer as GridViewRow;
-        int classificacao = Convert.ToInt32((row.Cells[1].Controls[0] as TextBox).Text);
-        string nome = (row.Cells[2].Controls[0] as TextBox).Text;
-        string cidade = (row.Cells[3].Controls[0] as TextBox).Text;
         Hotel hotel = new Hotel();
-
-        hotel.Codigo = Convert.ToInt32((row.Cells[0].Controls[0] as TextBox).Text);
-        hotel.Nome = nome;
-        hotel.Cidade = cidade;
-        hotel.Classificacao = classificacao;
+        hotel.Codigo = Convert.ToInt32((row.Cells[0].Text));
+        hotel.Classificacao = Convert.ToInt32((row.Cells[1].Controls[0] as TextBox).Text);
+        hotel.Nome = (row.Cells[2].Controls[0] as TextBox).Text;
+        hotel.Cidade = (row.Cells[3].Controls[0] as TextBox).Text;
 
         int status = HotelBD.Update(hotel);
-        if(status != 0) {
+        if (status != 0) {
             Response.Write("<script>alert('Erro'); </script>");
         }
 
@@ -89,6 +85,6 @@ public partial class Page_hotel : System.Web.UI.Page {
     }
 
     protected void gvHotels_RowDeleted(object sender, GridViewDeletedEventArgs e) {
-        
+
     }
 }

@@ -71,10 +71,10 @@ public class HotelBD {
             connection.Dispose();
             queryCommand.Dispose();
 
-        }catch(Exception) {
+        } catch (Exception) {
             status = -2;
         }
-        return status;        
+        return status;
     }
 
     public static int Delete(int codigo) {
@@ -91,7 +91,7 @@ public class HotelBD {
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
-        } catch (Exception ex) {
+        } catch (Exception) {
             status = -2;
         }
         return status;
@@ -102,7 +102,6 @@ public class HotelBD {
         try {
             IDbConnection connection;
             IDbCommand queryCommand;
-
 
             connection = Mapped.Connection();
             queryCommand = Mapped.Command("UPDATE HOT_HOTEL SET HOT_NOME= ?nome,HOT_CLASSIFICACAO= ?classificacao, HOT_CIDADE=?cidade WHERE HOT_CODIGO  =?codigo;", connection);

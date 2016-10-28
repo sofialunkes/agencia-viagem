@@ -33,7 +33,7 @@
                     <asp:Button ID="btnCancelar" CssClass="btn btn-danger" runat="server" Text="Cancelar" Width="95px" OnClick="btnCancelar_Click" />
                 </div>
                 <div class="col-xs-2">
-                    <asp:Button ID="btnCadastrar" CssClass="btn btn-success" runat="server" Text="Cadastrar" Width="95px"  />
+                    <asp:Button ID="btnCadastrar" CssClass="btn btn-success" runat="server" Text="Cadastrar" Width="95px"  OnClick="btnCadastrar_Click" />
                 </div>
                 <br />
                 <br /><br />
